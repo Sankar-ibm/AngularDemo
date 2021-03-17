@@ -11,9 +11,8 @@ RUN npm i && npm run build
 FROM nginxinc/nginx-unprivileged
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
-RUN chmod -R 777 /usr/share/nginx/html
 # Remove default nginx static assets
-RUN rm -rf ./*
+# RUN rm -rf ./*
 # Copy static assets from builder stage
 COPY --from=builder /app/dist/AngularNew .
 # Containers run nginx with global directives and daemon off

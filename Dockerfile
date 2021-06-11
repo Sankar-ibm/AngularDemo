@@ -5,6 +5,7 @@ WORKDIR /app
 # Copy all files from current directory to working dir in image
 COPY . .
 # install node modules and build assets
+npm install -g @angular/cli@8.0.0
 RUN npm install carbon-components carbon-components-angular @carbon/icons
 RUN npm i && npm run build
 

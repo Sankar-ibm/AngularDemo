@@ -3,7 +3,7 @@ FROM node:10 AS builder
 # Set working directory
 WORKDIR /app
 # Copy all files from current directory to working dir in image
-COPY . .
+# COPY . .
 # install node modules and build assets
 RUN npm install -g @angular/cli@8.0.0
 RUN npm install carbon-components carbon-components-angular @carbon/icons

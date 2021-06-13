@@ -1,5 +1,6 @@
 # Name the node stage "builder"
 # FROM node:10 AS builder
+FROM node:alpine
 # Set working directory
 WORKDIR /app
 # Copy all files from current directory to working dir in image
@@ -11,7 +12,8 @@ RUN npm install carbon-components carbon-components-angular @carbon/icons
 RUN npm i && npm run build
 
 # nginx state for serving content
-FROM nginxinc/nginx-unprivileged
+# FROM nginxinc/nginx-unprivileged
+FROM nginx
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
 # Remove default nginx static assets

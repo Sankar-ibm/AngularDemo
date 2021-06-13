@@ -1,6 +1,6 @@
 # Name the node stage "builder"
 # FROM node:10 AS builder
-FROM node:alpine
+FROM node:16
 # Set working directory
 WORKDIR /app
 # Copy all files from current directory to working dir in image
@@ -13,7 +13,7 @@ RUN npm i && npm run build
 
 # nginx state for serving content
 # FROM nginxinc/nginx-unprivileged
-FROM nginx
+FROM nginx:alpine
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
 # Remove default nginx static assets

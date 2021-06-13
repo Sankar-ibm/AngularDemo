@@ -12,8 +12,8 @@ RUN npm install carbon-components carbon-components-angular @carbon/icons
 RUN npm i && npm run build
 
 # nginx state for serving content
-# FROM nginxinc/nginx-unprivileged
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged
+# FROM nginx:alpine
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
 # Remove default nginx static assets

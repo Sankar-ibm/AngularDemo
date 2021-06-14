@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~carbon-components/scss/globals/scss/styles';
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+body {
+    margin: 0;
+    background-color: whitesmoke;
+    padding: 0;
+    min-width: auto;
+}
+a.bx--side-nav__link, .bx--side-nav a.bx--header__menu-item, .bx--side-nav .bx--header__menu-title[aria-expanded=true] + .bx--header__menu {
+padding: 0px;
+margin-left: 2px;
+margin-top: -3px;
+}
+.bx--side-nav__icon:not(.bx--side-nav__submenu-chevron) {
+    margin-left: 14px;
+}
+.bx--side-nav__link{
+    height: 40px;
+}
+.bx--header__menu-trigger > svg:hover{
+    display: block;
+}
+.bx--header__menu-trigger > svg{
+    fill: black;
+}
+.bx--header__action:hover {
+    background-color: #e5e5e5 !important;
+    height: 20px !important;
+
+}
+.bx--header__menu-toggle {
+    display: -webkit-inline-box;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.bx--side-nav--rail {
+    border: 1px solid #D1D1D1;
+    top: 79px;
+}
+.bx--side-nav__item {
+    margin-left: -6px;
+    padding-top: 4px;
+}
+
+/* header part */ 
+.bx--text-input{
+    margin-left: 7px;
+    width: 95%;
+}
+
+.bx--btn--primary{
+    width: 105px;
+    margin-left: 31px; 
+    border-radius: 27px;
+}
+a.bx--header__menu-item {
+    color: #252121;
+    display: contents;
+}
+.bx--header__nav::before {
+    background: white;
+    transform: translateY(90%);
+}
+.bx--header__nav{
+    background-color: white;
+    padding-left: 35px;
+}
+.bx--header__menu-bar {
+    border-bottom: 1px solid #d1d1d1;
+    height: 80px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: -20px;
+}
+.bx--tooltip{
+    color: black;
+    background-color: white;
+    box-sizing: border-box;
+    height: 65px;
+    width: 184px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+.bx--tooltip .bx--tooltip__caret {
+    border-bottom: white;
+}
+/* model-popup */
+ .bx--modal-container {
+    width: 35%;
+    height: 35%;
+}

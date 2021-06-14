@@ -1,0 +1,24 @@
+<ibm-sidenav rail="hasHamburger" [expanded]="isSideNavExpanded">
+	<ibm-sidenav-item class="hamburgnav">
+	    <ibm-hamburger *ngIf="hasHamburger" [active]="isSideNavExpanded" (selected)="isSideNavExpanded = !isSideNavExpanded" style="margin-left: -15px;"></ibm-hamburger>&nbsp;&nbsp;
+        <span class="sedemenu" *ngIf="isSideNavExpanded">Menü schließen</span>
+	</ibm-sidenav-item>
+	 <hr class="rectangle">
+	 <div class="line">
+		<img class="portfolio-img" src="../../assets/cb_icons_ft_portfolio.svg"/>
+        <span class="portfolio">Portfolio</span>
+	</div>
+	<ibm-sidenav-item>
+		<svg class="sidemenuitem" ibmIcon="analytics--reference"></svg>
+		<span class="neueidee">Neue Idee</span>
+	</ibm-sidenav-item>
+    <ibm-sidenav-item>
+		<svg class="sidemenuitem" ibmIcon="analytics"></svg>
+       <span class="risikostrategie">Risikostrategie</span> 
+	</ibm-sidenav-item>
+    <ibm-sidenav-item>
+		<!-- <img style="color:#464646;" class="uberweungimg" src="../../assets/cb_icons_ft_überweisung.svg"/> -->
+		<svg class="sidemenuitem" ibmIcon="document--add"></svg>
+		<span class="uberweisung">Überweisung</span>
+	</ibm-sidenav-item>
+</ibm-sidenav>

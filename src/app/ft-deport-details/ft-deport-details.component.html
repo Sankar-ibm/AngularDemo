@@ -1,0 +1,5 @@
+<button #trigger class="weiter" (click)="open = true"><span class="details">Details</span></button>
+			<ibm-modal [open]="open" [trigger]="trigger" (overlaySelected)="open = false">
+				<ibm-modal-header class="modelpopup" (closeSelect)="open = false">
+				</ibm-modal-header>
+			</ibm-modal>

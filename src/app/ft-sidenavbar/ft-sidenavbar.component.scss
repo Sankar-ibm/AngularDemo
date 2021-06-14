@@ -1,0 +1,106 @@
+.sedemenu{
+  height: 20px;
+  width: 100px;
+  color: #464646;
+  font-family: "ProximaNovaT Semibold","Helvetica",Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: center;
+  position: relative;
+  top: -4px;
+}
+.hamburgnav{
+    display: block !important;
+    margin-left: -38px;
+   margin-top: -17px;
+}
+.portfolio-img {
+    height: 40px;
+    width: 21px;
+    position: absolute;
+    margin-left: 9px;
+}
+.portfolio{
+    height: 20px;
+    width: 53px;
+    color: #0080A6;
+    font-family: "ProximaNovaT Semibold","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 37px;
+   padding-left: 53px;
+   position: absolute;
+   margin-top: 3px;
+}
+.sidemenuitem{
+    height: 20px;
+    width: 20px;
+    fill: #464646;
+    margin-left: 1px;
+}
+.neueidee{
+    height: 20px;
+    width: 65px;
+    color: #464646;
+    font-family: "ProximaNovaT Semibold","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.risikostrategie{
+    height: 20px;
+    width: 93px;
+    color: #464646;
+    font-family: "ProximaNovaT Semibold","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.uberweungimg{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -40px;
+    fill: #464646;
+    color: #464646;
+}
+.uberweisung{
+    height: 20px;
+    width: 84px;
+    color: #464646;
+    font-family: "ProximaNovaT Semibold","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding-left: 0px;
+}
+.hamburgnav:hover{
+    display: block;
+}
+.rectangle{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(209,209,209,0.35); 
+    margin-top: 0px;
+    border: 1px  #D1D1D1;;
+}
+.line{
+    border-left: 3px solid #0080A6;
+    height: 40px;
+}
+.line:hover{
+    background-color: #e5e5e5;
+}
+
+.hamburgnav>.bx--side-nav__link{
+    margin-left: -56px;
+  }
+  .span.bx--side-nav__link-text{
+    margin-left: -56px;
+  }

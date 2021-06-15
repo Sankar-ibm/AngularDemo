@@ -12,7 +12,7 @@ script: "echo 'Building Docker image with tags'"
 after_success:
   - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
   # Creating a custom tag for the docker image in addition to the default "latest" tag.
-  - docker build -t demo:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t web-frontend:latest .
+  - docker build -t web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t web-frontend:latest .
   # script: chmod +x ./scripts/* && ./scripts/execute.sh <Cluster Namespace> <Container Registry Namespace>
   - chmod +x ./build_and_push_image.sh || travis_terminate 4
 

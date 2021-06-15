@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cr_namespace=$1
+cr_namespace=web-frontend-dev
 echo "Container Registry Namespace: $cr_namespace"
 
 ############################################################################

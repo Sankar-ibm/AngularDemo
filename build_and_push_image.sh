@@ -15,7 +15,7 @@ curl -sL https://ibm.biz/idt-installer | bash
 # Log into the IBM Cloud environment using apikey                          #
 ############################################################################
 echo "Login to IBM Cloud using apikey"
-ibmcloud login -a https://api.ng.bluemix.net --apikey $CLOUD_COS_API_KEY -r us-east
+ibmcloud login -a https://api.ng.bluemix.net --apikey oe4Q4aM_glYb9FNmzyx8GXwepkuLgILwBEHjc_hYhndE -r us-east
 if [ $? -ne 0 ]; then
   echo "Failed to authenticate to IBM Cloud"
   exit 1

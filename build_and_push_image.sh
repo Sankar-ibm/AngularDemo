@@ -1,8 +1,6 @@
 #!/bin/bash
 
-cluster_namespace=$1
-cr_namespace=$2
-echo "Cluster Namespace: $cluster_namespace"
+cr_namespace=$1
 echo "Container Registry Namespace: $cr_namespace"
 
 ############################################################################

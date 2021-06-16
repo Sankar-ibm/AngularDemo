@@ -13,7 +13,5 @@ after_success:
   - docker build -t web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t web-frontend:latest .
   # script: chmod +x ./scripts/* && ./scripts/execute.sh <Cluster Namespace> <Container Registry Namespace>
   - ./build_and_push_image.sh web-frontend-dev
-
-deploy:
   - ./openshift_deploy.sh
   

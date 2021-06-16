@@ -28,7 +28,7 @@ docker tag web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH us
 docker tag web-frontend:latest us.icr.io/$cr_namespace/web-frontend:latest
 
 ############################################################################
-# Log into the IBM Cloud container registry                                          #
+# Log into the IBM Cloud container registry                                #
 ############################################################################
 echo "Logging into IBM Cloud container registry"
 ibmcloud cr login

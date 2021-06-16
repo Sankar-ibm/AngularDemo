@@ -23,9 +23,9 @@ fi
 ############################################################################
 # tag the image as latest and with the custom tag                          #
 ############################################################################
-echo "Tagging the image as web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH and web-frontend:latest"
-docker tag web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH us.icr.io/$cr_namespace/web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH
-docker tag web-frontend:latest us.icr.io/$cr_namespace/web-frontend:latest
+echo "Tagging the image as web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH and frontend:latest"
+docker tag web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH us.icr.io/$cr_namespace/frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH
+docker tag web-frontend:latest us.icr.io/$cr_namespace/frontend:latest
 
 ############################################################################
 # Log into the IBM Cloud container registry                                #
@@ -42,22 +42,22 @@ fi
 # then recreate it                                                         #
 ############################################################################
 echo "looking to see if the image exists"
-echo "using command: ibmcloud cr images | grep us.icr.io/$cr_namespace/web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH"
+echo "using command: ibmcloud cr images | grep us.icr.io/$cr_namespace/frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH"
 
-lookup_image=$( ibmcloud cr images | grep "us.icr.io/$cr_namespace/web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH" )
+lookup_image=$( ibmcloud cr images | grep "us.icr.io/$cr_namespace/frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH" )
 
 echo "Now looking to see if the image exists"
-echo "using command: ibmcloud cr images | grep us.icr.io/$cr_namespace/web-frontend:latest"
+echo "using command: ibmcloud cr images | grep us.icr.io/$cr_namespace/frontend:latest"
 
-lookup_image=$( ibmcloud cr images | grep "us.icr.io/$cr_namespace/web-frontend:latest" )
+lookup_image=$( ibmcloud cr images | grep "us.icr.io/$cr_namespace/frontend:latest" )
 
 ############################################################################
 # Push the image                                                           #
 ############################################################################
 echo "Pushing image to registry"
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker push us.icr.io/$cr_namespace/web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH
-docker push us.icr.io/$cr_namespace/web-frontend:latest
+docker push us.icr.io/$cr_namespace/frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH
+docker push us.icr.io/$cr_namespace/frontend:latest
 ############################################################################
 # end script                                                               #
 ############################################################################

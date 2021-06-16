@@ -15,8 +15,5 @@ after_success:
   - ./build_and_push_image.sh web-frontend-dev
 
 deploy:
-  provider: openshift
-  server: https://c100-e.us-east.containers.cloud.ibm.com:31217
-  token: OLHiAQNW30OQCyKGNCmzDoStW1mgSnVZis82X6q1_WU
-  script: openshift_deploy.sh
+  - ./openshift_deploy.sh
   

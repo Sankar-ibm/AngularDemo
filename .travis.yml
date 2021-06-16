@@ -1,9 +1,7 @@
+# test
 language: node_js
 node_js:
-  - "10.15.2"
-dist: trusty
-sudo: required
-
+  - 12
 services:
   - docker
 
@@ -14,13 +12,12 @@ after_success:
   # Creating a custom tag for the docker image in addition to the default "latest" tag.
   - docker build -t web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t web-frontend:latest .
   # script: chmod +x ./scripts/* && ./scripts/execute.sh <Cluster Namespace> <Container Registry Namespace>
-  - chmod +x ./build_and_push_image.sh || travis_terminate 4
+  - ./build_and_push_image.sh web-frontend-dev
 
 deploy:
   provider: openshift
   server: https://c100-e.us-east.containers.cloud.ibm.com:31217
   token: OLHiAQNW30OQCyKGNCmzDoStW1mgSnVZis82X6q1_WU
   project: csankara-in
-  app: web-frontend
   edge: true
-
+  

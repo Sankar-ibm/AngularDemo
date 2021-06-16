@@ -1,6 +1,6 @@
 #!/bin/bash
-# start
-cr_namespace=web-frontend-dev
+# test
+cr_namespace=$1
 echo "Container Registry Namespace: $cr_namespace"
 
 ############################################################################
@@ -14,7 +14,7 @@ curl -sL https://ibm.biz/idt-installer | bash
 ############################################################################
 echo "Login to IBM Cloud using apikey"
 ibmcloud config --check-version=false
-ibmcloud login -a https://api.ng.bluemix.net --apikey oe4Q4aM_glYb9FNmzyx8GXwepkuLgILwBEHjc_hYhndE -r us-south
+ibmcloud login -a https://api.ng.bluemix.net --apikey $CLOUD_API_KEY -r us-south
 if [ $? -ne 0 ]; then
   echo "Failed to authenticate to IBM Cloud"
   exit 1
@@ -28,7 +28,7 @@ docker tag web-frontend:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH us
 docker tag web-frontend:latest us.icr.io/$cr_namespace/web-frontend:latest
 
 ############################################################################
-# Log into the IBM Cloud container registry                                          #
+# Log into the IBM Cloud container registry                                #
 ############################################################################
 echo "Logging into IBM Cloud container registry"
 ibmcloud cr login
